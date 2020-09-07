@@ -2,11 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-interface UseCSVParams {
-  file: string;
-}
-
-export function useCSV({ file }: UseCSVParams): string[] {
+export function useCSV(file: string): string[] {
   const [data, setData] = useState();
 
   useEffect(() => {

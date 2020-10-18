@@ -3,11 +3,17 @@
 import React, { useState, useEffect } from 'react';
 import { useCSV } from '../common/hooks';
 
-function CsvReader(): JSX.Element {
-  const content = useCSV('/resources/test.csv');
+type CSVReaderProps = {
+  file: string;
+};
+
+function CsvReader(props: CSVReaderProps): JSX.Element {
+  const { file } = props;
+  const content = useCSV(file);
   const [data, setData] = useState(['no data']);
 
   useEffect(() => {
+    console.log(content);
     setData(content);
   }, [content]);
 

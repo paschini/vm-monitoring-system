@@ -7,7 +7,7 @@ function VmStatus(): JSX.Element {
   return (
     <div>
       This is the status:
-      <CsvReader />
+      <CsvReader file={'/resources/hostInfo.csv'} />
     </div>
   );
 }

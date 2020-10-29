@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
-export function useCSV(file: string): string[] {
-  const [data, setData] = useState();
+export function useCSV(file: string): string[][] {
+  const [data, setData] = useState([['no data']]);
 
   useEffect(() => {
     const rawFile = new XMLHttpRequest();
@@ -15,7 +15,6 @@ export function useCSV(file: string): string[] {
             .split('\n') // breaks lines on 'return'
             .filter((line) => line !== '') // removes empty lines (there's one at the EOF)
             .map((line) => line.split(',')); // breaks comma separated values into columns;
-
           setData(content); // breaks comma separated values into columns);
         }
       }

@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { createUseStyles, useTheme } from 'react-jss';
 import VmStatus from './components/VMStatus';
 
@@ -15,7 +15,7 @@ const useStyles = createUseStyles({
   }
 });
 
-function Layout(): JSX.Element {
+function Layout(): ReactElement {
   const theme = useTheme();
   const classes = useStyles({ theme });
 

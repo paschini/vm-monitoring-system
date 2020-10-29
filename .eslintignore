@@ -1,5 +1,2 @@
 node_modules
-src/main/groovy
-src/main/webapp/scripts
-src/main/webapp/dist
-target
+public

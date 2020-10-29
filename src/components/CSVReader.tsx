@@ -1,19 +1,18 @@
 /** @format */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactElement } from 'react';
 import { useCSV } from '../common/hooks';
 
 type CSVReaderProps = {
   file: string;
 };
 
-function CsvReader(props: CSVReaderProps): JSX.Element {
+function CsvReader(props: CSVReaderProps): ReactElement {
   const { file } = props;
   const content = useCSV(file);
-  const [data, setData] = useState(['no data']);
+  const [data, setData] = useState([['no data']]);
 
   useEffect(() => {
-    console.log(content);
     setData(content);
   }, [content]);
 

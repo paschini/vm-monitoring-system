@@ -1,9 +1,9 @@
 /** @format */
 
-import React from 'react';
+import React, { ReactElement } from 'react';
 import CsvReader from './CSVReader';
 
-function VmStatus(): JSX.Element {
+function VmStatus(): ReactElement {
   return (
     <div>
       This is the status:
